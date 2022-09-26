@@ -1,0 +1,17 @@
+/*
+Theme Name: Template of My First theme
+Theme URI: URL to your Theme
+Author: Your name (dev name)
+Author URI: Author (dev) website URL
+Description: Description of your website
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Theme name: needs to be one word (i.e. TwentyTwenty)
+Tags: Used to find your theme when user(s) searches in the themes panel.
+*/
+
+body {
+    background-color: pink;
+    text-align: center;
+}
