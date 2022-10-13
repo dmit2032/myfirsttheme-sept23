@@ -1,5 +1,5 @@
 /*
-Theme Name: Template of My First theme
+Theme Name: My First theme Template
 Theme URI: URL to your Theme
 Author: Your name (dev name)
 Author URI: Author (dev) website URL
@@ -12,6 +12,32 @@ Tags: Used to find your theme when user(s) searches in the themes panel.
 */
 
 body {
-    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+p {
+    max-width: 70ch;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+article {
+    border-bottom: 1px solid darkgray;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #ccc;
+    padding: 2rem;
 }

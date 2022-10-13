@@ -18,6 +18,22 @@ function myfirsttheme_setup() {
     add_theme_support('title-tag');
 
     add_theme_support( 'post-thumbnails' );
+
+    /** custom logo **/
+    add_theme_support( 'custom-logo', array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    ) );
+
+    	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus(
+		array(
+			'main-menu' => 'Main Menu'
+		)
+	);
 }
 add_action('after_setup_theme', 'myfirsttheme_setup');
 
@@ -32,5 +48,19 @@ function myfirsttheme_enqueue_styles() {
 	
 }
 add_action('wp_enqueue_scripts', 'myfirsttheme_enqueue_styles');
+
+
+//https://developer.wordpress.org/reference/functions/the_excerpt/
+function wpdocs_excerpt_more( $more ) {
+	if ( ! is_single() ) {
+		$more = sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+			get_permalink( get_the_ID() ),
+			__( ' Read More', 'textdomain' )
+		);
+	}
+
+	return $more;
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 ?>

@@ -18,7 +18,6 @@
         <?php
             if ( have_posts() ) :
                 while ( have_posts() ) : the_post();
-                    //what is being displayed, and this will come from our template part
                     get_template_part( 'template-parts/content', 'page' );
                 endwhile;
             endif;
